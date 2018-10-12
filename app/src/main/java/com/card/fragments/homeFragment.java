@@ -23,8 +23,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.card.AddCreditActivity;
 import com.card.MainActivity;
+import com.card.PurchaseActivity;
 import com.card.R;
+import com.card.RemainingActivity;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -59,7 +62,8 @@ public class homeFragment extends Fragment {
         Remaining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(getContext(), RemainingActivity.class);
+                startActivity(i);
             }
         });
 
@@ -94,7 +98,8 @@ public class homeFragment extends Fragment {
         credit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(getContext(), AddCreditActivity.class);
+                startActivity(i);
             }
         });
 
@@ -102,7 +107,8 @@ public class homeFragment extends Fragment {
         purchase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(getContext(), PurchaseActivity.class);
+                startActivity(i);
             }
         });
 

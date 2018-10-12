@@ -27,4 +27,7 @@
     <string name="login">login</string>
     <string name="qrcode">Qrcode</string>
     <string name="name">Name :</string>
+    <string name="ok">Ok</string>
+    <string name="remaining_balance_is">Remaining balance is:</string>
+    <string name="no_any_purchase">No any purchase</string>
 </resources>
