@@ -30,4 +30,9 @@
     <string name="ok">Ok</string>
     <string name="remaining_balance_is">Remaining balance is:</string>
     <string name="no_any_purchase">No any purchase</string>
+    <string name="edit_account">Edit Accounts</string>
+    <string name="help">Help</string>
+    <string name="log_out">Log Out</string>
+    <string name="edit">Edit</string>
+    <string name="code_number">Code Number</string>
 </resources>

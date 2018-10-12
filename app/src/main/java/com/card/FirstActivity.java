@@ -19,13 +19,12 @@ public class FirstActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
                 .setDefaultFontPath("fonts/regular.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );
-
+        setContentView(R.layout.activity_first);
 
         Button sign_in=(Button)findViewById(R.id.sign_in);
         sign_in.setOnClickListener(
