@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmEmailActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="@color/text_color"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/an_e_mail_has_been_sent_to_your_registered_e_mail_address_please_enter_the_verification_code_included_in_that_e_mail"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/text_color"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:text="@string/please_note_that_the_verification_code_will_expire_24_hours_after_the_e_mail_was_sent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textColor="@color/text_color"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:text="Verification code"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/code"
+        android:textSize="@dimen/_12sdp"
+        android:textColorHint="@color/text_color"
+        android:textColor="@color/text_color"
+        android:background="@drawable/rounded_edittext"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@color/colorAccent2"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:id="@+id/submit"
+        android:text="@string/submit"/>
+
+
+</LinearLayout>

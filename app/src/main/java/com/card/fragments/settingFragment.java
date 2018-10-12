@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.card.MainActivity;
 import com.card.R;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;

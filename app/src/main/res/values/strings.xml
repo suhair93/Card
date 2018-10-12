@@ -9,4 +9,22 @@
     <string name="qr_scanner">Qr:Scanner</string>
     <string name="add_credit">Add credit</string>
     <string name="purchase">Purchase</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="user_name">User Name</string>
+    <string name="id_number">ID Number</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="e_mail">E-mail</string>
+    <string name="sign">Sign</string>
+    <string name="an_e_mail_has_been_sent_to_your_registered_e_mail_address_please_enter_the_verification_code_included_in_that_e_mail">An e-mail has been sent to your registered e-mail address please enter the verification code included in that e-mail.</string>
+    <string name="please_note_that_the_verification_code_will_expire_24_hours_after_the_e_mail_was_sent">Please note that the verification code will expire 24 hours after the e-mail was sent</string>
+    <string name="submit">Submit</string>
+    <string name="registration_success">Registration Success !</string>
+    <string name="done">Done</string>
+    <string name="welcome">Welcome !</string>
+    <string name="future_is_here">Future is here</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an Account? Sign Up</string>
+    <string name="login">login</string>
+    <string name="qrcode">Qrcode</string>
+    <string name="name">Name :</string>
 </resources>

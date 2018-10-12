@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back3"
+    android:background="@drawable/lkjh"
     tools:context=".FirstActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
 
+android:layout_marginTop="@dimen/_80sdp"
         android:orientation="vertical"
         android:layout_height="wrap_content">
         <ImageView
@@ -21,20 +22,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_12sdp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="@dimen/_30sdp"
-
-            android:text="Welcome !"/>
+            android:text="@string/welcome"/>
         <TextView
             android:layout_width="wrap_content"
             android:textColor="@color/white"
-            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_12sdp"
             android:layout_height="wrap_content"
             android:textSize="@dimen/_20sdp"
             android:layout_gravity="center"
-            android:text="Future is here"/>
+            android:text="@string/future_is_here"/>
 
 
     </LinearLayout>
@@ -63,7 +63,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/_14sdp"
             android:id="@+id/sign_up"
-            android:text="Don't have an Account? Sign Up"/>
+            android:text="@string/don_t_have_an_account_sign_up"/>
 
     </LinearLayout>
 
