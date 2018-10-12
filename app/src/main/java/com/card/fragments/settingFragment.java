@@ -26,7 +26,6 @@ public class settingFragment extends Fragment {
                 .build()
         );
          view= inflater.inflate(R.layout.fragment_setting, container, false);
-         MainActivity.title.setText(getResources().getString(R.string.setting));
 
 
 

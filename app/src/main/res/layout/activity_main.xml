@@ -3,12 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content">
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_55sdp"
-        android:id="@+id/toolbar"
-        android:paddingEnd="@dimen/_10sdp"
-        android:paddingStart="@dimen/_10sdp"
+        android:layout_height="@dimen/_50sdp"
+
+
         android:background="@color/colorPrimary">
 
         <TextView
@@ -23,7 +27,7 @@
             android:paddingEnd="@dimen/_10sdp"/>
 
     </RelativeLayout>
-
+    </android.support.design.widget.AppBarLayout>
     <ScrollView android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:fillViewport="true"

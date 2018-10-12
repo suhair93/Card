@@ -3,4 +3,10 @@
     <string name="home">Home</string>
     <string name="locations">Locations</string>
     <string name="setting">Setting</string>
+    <string name="sign_in">Sign In</string>
+    <string name="id">ID : </string>
+    <string name="remaining_balance">Remaining balance</string>
+    <string name="qr_scanner">Qr:Scanner</string>
+    <string name="add_credit">Add credit</string>
+    <string name="purchase">Purchase</string>
 </resources>

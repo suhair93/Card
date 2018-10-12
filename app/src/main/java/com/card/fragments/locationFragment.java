@@ -26,7 +26,6 @@ public class locationFragment extends Fragment {
                 .build()
         );
          view= inflater.inflate(R.layout.fragment_location, container, false);
-         MainActivity.title.setText(getResources().getString(R.string.locations));
 
 
 
