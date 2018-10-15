@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.card.AboutActivity;
 import com.card.AddCreditActivity;
 import com.card.EditAccountActivity;
 import com.card.FirstActivity;
@@ -50,7 +51,8 @@ public class settingFragment extends Fragment {
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(getContext(), AboutActivity.class);
+                startActivity(i);
             }
         });
         LinearLayout logout=(LinearLayout)view.findViewById(R.id.logout);

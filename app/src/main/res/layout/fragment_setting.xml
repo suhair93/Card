@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_40sdp"
-                android:text="@string/help"
+                android:text="@string/about"
                 android:layout_weight=".1"
                 android:textColor="@color/text_color"
                 android:textSize="@dimen/_20sdp"
