@@ -18,10 +18,10 @@ public class AboutActivity extends AppCompatActivity {
         versionElement.setTitle("Version 1.0");
         View aboutPage = new AboutPage(this)
                 .isRTL(false)
-                .setImage(R.drawable.wallet2)
+                .setImage(R.drawable.wallet_3)
                 .addItem(versionElement)
               //  .addItem(adsElement)
-                .setDescription("card app")
+                .setDescription("E Wallet App")
                 .addGroup("Connect with us")
                 .addEmail("elmehdi.sakout@gmail.com")
                 .addWebsite("http://medyo.github.io/")
