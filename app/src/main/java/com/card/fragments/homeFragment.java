@@ -62,8 +62,26 @@ public class homeFragment extends Fragment {
         Remaining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getContext(), RemainingActivity.class);
-                startActivity(i);
+
+                final AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                LayoutInflater inflater = (LayoutInflater) getContext().getSystemService( Context.LAYOUT_INFLATER_SERVICE );
+
+                View views = inflater.inflate(R.layout.activity_remaining, null);
+                alertDialog.setView(views);
+                final TextView balnce=(TextView)views.findViewById(R.id.balnce);
+                balnce.setText("3000" +" SAR");
+
+                Button ok=(Button)views.findViewById(R.id.ok);
+                ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog.dismiss();
+
+                    }
+                });
+
+
+                alertDialog.show();
             }
         });
 

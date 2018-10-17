@@ -22,24 +22,6 @@ public class RemainingActivity extends AppCompatActivity {
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );
-        ImageView Back_btn=(ImageView)findViewById(R.id.Back_btn);
-        Back_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-        final TextView balnce=(TextView)findViewById(R.id.balnce);
-        balnce.setText("3000" +" SAR");
-
-        Button ok=(Button)findViewById(R.id.ok);
-        ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-
-            }
-        });
 
     }
     @Override
