@@ -2,11 +2,21 @@ package com.card.Model;
 
 
 public class PurchaseModel {
-    public String ID;
-    public String Price;
-    public String Date;
+    private String ID;
+    private String Price;
+    private String Date;
+
+
+    public PurchaseModel() {
+    }
 
     public PurchaseModel(String price, String date) {
+        Price = price;
+        Date = date;
+    }
+
+    public PurchaseModel(String ID, String price, String date) {
+        this.ID = ID;
         Price = price;
         Date = date;
     }

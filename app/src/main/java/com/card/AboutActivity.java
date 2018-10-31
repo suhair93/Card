@@ -39,15 +39,11 @@ public class AboutActivity extends AppCompatActivity {
                 .addItem(phoneElement)
                 .setDescription("E Wallet App")
                 .addGroup("Connect with us")
-                .addEmail("elmehdi.sakout@gmail.com")
-                .addWebsite("http://medyo.github.io/")
+                .addEmail("")
+                .addInstagram("")
+                .addTwitter("")
                 .setCustomFont("fonts/regular.ttf")
-                .addFacebook("the.medy")
-                .addTwitter("medyo80")
-                .addYoutube("UCdPQtdWIsg7_pi4mrRu46vA")
-                .addPlayStore("com.ideashower.readitlater.pro")
-              //  .addGitHub("medyo")
-                .addInstagram("medyo80")
+
                 .create();
         setContentView(aboutPage);
 

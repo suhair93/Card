@@ -27,7 +27,6 @@
     <string name="login">login</string>
     <string name="qrcode">Qrcode</string>
     <string name="name">Name :</string>
-    <string name="ok">Ok</string>
     <string name="remaining_balance_is">Remaining balance is:</string>
     <string name="no_any_purchase">No any purchase</string>
     <string name="edit_account">Edit Accounts</string>
@@ -37,4 +36,15 @@
     <string name="code_number">Code Number</string>
     <string name="title_activity_maps">Map</string>
     <string name="about">About</string>
+    <string name="add_purchase">Add Purchase</string>
+    <!-- Strings related to barcode scanner -->
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="admin">Admin</string>
+    <string name="change_password">Change PAssword</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+
 </resources>

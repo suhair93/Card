@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_above="@+id/ll2"
-        android:layout_marginBottom="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
 
         android:layout_height="wrap_content">
         <ImageView
@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/_20sdp"
+                android:textSize="@dimen/_18sdp"
                 android:id="@+id/id_number"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:textColor="@color/text_color"

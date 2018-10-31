@@ -36,5 +36,12 @@ dependencies {
     implementation 'com.google.zxing:core:3.2.1'
     implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
     implementation 'com.github.medyo:android-about-page:1.2.4'
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.firebase:firebase-database:16.0.4'
+  //  implementation 'com.fusedbulb.lib:fusedbulblib:1.0.0'
+    implementation 'com.github.blikoon:QRCodeScanner:0.1.2'
 
 }
+apply plugin: 'com.google.gms.google-services'

@@ -1,5 +1,6 @@
 package com.card.fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -13,6 +14,8 @@ import android.widget.TextView;
 import com.card.Adapter.LocationsAdapter;
 import com.card.MainActivity;
 import com.card.Model.LocationModel;
+import com.card.Model.LocationModelMap;
+import com.card.PurchaseActivity;
 import com.card.R;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -23,18 +26,27 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.GenericTypeIndicator;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
 public class locationFragment extends Fragment implements OnMapReadyCallback {
     View view;
     //RecyclerView recyclerView;
     private GoogleMap mMap;
-
+    String ID;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -51,54 +63,92 @@ public class locationFragment extends Fragment implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
 
 
-  /*      TextView noMember=(TextView)view.findViewById(R.id.no_member) ;
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getContext());
-        mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recycler);
-        recyclerView.setLayoutManager(mLayoutManager);
-        // GetNotification(Token);
-
-        List<LocationModel> lList = new ArrayList<LocationModel>();
-        lList.add(new LocationModel("Tamimi Markets","Khaled Bin Alwaleed St. Riyadh, Saudi Arabia , Riyadh"));
-        lList.add(new LocationModel("SACO Hardware","Head Office, Takhassusi Main Road, Riyadh"));
+//        SharedPreferences prefsRemmber = getActivity().getSharedPreferences("login", MODE_PRIVATE);
+  //      ID = prefsRemmber.getString("ID", "");
 
 
-        if(lList.size()==0)
-            noMember.setVisibility(View.VISIBLE);
-        else {
-            LocationsAdapter nAdapter = new LocationsAdapter(getContext(), lList);
-            recyclerView.setAdapter(nAdapter);
-            recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        }
+    /*
+     FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference posts = database.getReference("Location");
+    LocationModelMap post1=new LocationModelMap("1","Market 1","24.88773","46.92185");
+        LocationModelMap post2=new LocationModelMap("2","Market 2","24.58773","46.22185");
+        LocationModelMap post3=new LocationModelMap("3","Market 3","24.2773","46.6185");
+        LocationModelMap post4=new LocationModelMap("4","Market 4","24.38773","46.4185");
 
-*/
+        posts.push().setValue(post1);
+        posts.push().setValue(post2);
+        posts.push().setValue(post3);
+        posts.push().setValue(post4);*/
+
+
 
         return view;
     }
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference posts = database.getReference("Location");
 
-        LatLng origin = new LatLng(24.68773, 46.72185);
-        CameraUpdate panToOrigin = CameraUpdateFactory.newLatLng(origin);
-        mMap.moveCamera(panToOrigin);
-       // BitmapDescriptor ic1 = BitmapDescriptorFactory.fromResource(R.drawable.maintenance);
+        posts.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                dataSnapshot.getValue(LocationModelMap.class);
+                HashMap<String, LocationModelMap> results =
+                        dataSnapshot.getValue(new GenericTypeIndicator<HashMap<String, LocationModelMap>>() {});
+                List<LocationModelMap> lList = new ArrayList<LocationModelMap>(results.values());
 
-        MarkerOptions marker = new MarkerOptions()
-                .position(origin)
-                .title("Riyadh, Saudi Arabia ")
-                .snippet("")
-                //.icon(ic4)
-                ;
-        googleMap.addMarker(marker);
-        // set zoom level with animation
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 400, null);
+                if(lList.size()==0){}
+                else {
 
-        // Add a marker in Sydney and move the camera
-    //    LatLng sydney = new LatLng(-34, 151);
-      //  mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-      //  mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+                    for(int i=0;i<lList.size();i++){
+                        if(i==0){
+                            LatLng origin = new LatLng(  Double.parseDouble(lList.get(i).getLat()), Double.parseDouble(lList.get(i).getLng()));
+                            CameraUpdate panToOrigin = CameraUpdateFactory.newLatLng(origin);
+                            mMap.moveCamera(panToOrigin);
+                            // BitmapDescriptor ic1 = BitmapDescriptorFactory.fromResource(R.drawable.maintenance);
+
+                            MarkerOptions marker = new MarkerOptions()
+                                    .position(origin)
+                                    .title(lList.get(i).getName())
+                                    .snippet("")
+                                    //.icon(ic4)
+                                    ;
+                            googleMap.addMarker(marker);
+                            mMap.animateCamera(CameraUpdateFactory.zoomTo(16), 400, null);
+
+                        }else {
+                            LatLng origin = new LatLng(Double.parseDouble(lList.get(i).getLat()), Double.parseDouble(lList.get(i).getLng()));
+                            MarkerOptions marker = new MarkerOptions()
+                                    .position(origin)
+                                    .title(lList.get(i).getName())
+                                    .snippet("")
+                                    //.icon(ic4)
+                                    ;
+                      //      googleMap.addMarker(marker);
+                        }
+
+
+                    }
+
+
+                }
+
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+       // mMap.animateCamera(CameraUpdateFactory.zoomTo(20), 400, null);
+
     }
 
 }

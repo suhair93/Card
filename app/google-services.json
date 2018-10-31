@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "782070646426",
+    "firebase_url": "https://card-9f0fa.firebaseio.com",
+    "project_id": "card-9f0fa",
+    "storage_bucket": "card-9f0fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782070646426:android:ff65f043eb8d3857",
+        "android_client_info": {
+          "package_name": "com.card"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782070646426-lc59or44qta696tpaicm5r2060185hkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXvj9ptc7ddshVg5MVQzw9a3Cvkg9KarQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

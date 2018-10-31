@@ -55,7 +55,21 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
-            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:id="@+id/e_mail"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/_12sdp"
+            android:textColorHint="@color/colorAccent2"
+            android:textColor="@color/colorAccent2"
+            android:hint="@string/e_mail"
+            android:background="@drawable/rounded_edittext"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:padding="@dimen/_5sdp"
@@ -82,50 +96,9 @@
             android:hint="@string/id_number"
             android:background="@drawable/rounded_edittext"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:padding="@dimen/_5sdp"
-            android:textColorHint="@color/colorAccent2"
-            android:id="@+id/password"
-            android:textSize="@dimen/_12sdp"
-            android:inputType="textPassword"
-            android:textColor="@color/colorAccent2"
-            android:hint="@string/password"
-            android:background="@drawable/rounded_edittext"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:padding="@dimen/_5sdp"
-            android:id="@+id/confirm_password"
-            android:textSize="@dimen/_12sdp"
-            android:textColor="@color/colorAccent2"
-            android:textColorHint="@color/colorAccent2"
-            android:inputType="textPassword"
-            android:hint="@string/confirm_password"
-            android:background="@drawable/rounded_edittext"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:padding="@dimen/_5sdp"
-            android:id="@+id/e_mail"
-            android:inputType="textEmailAddress"
-            android:textSize="@dimen/_12sdp"
-            android:textColorHint="@color/colorAccent2"
-            android:textColor="@color/colorAccent2"
-            android:hint="@string/e_mail"
-            android:background="@drawable/rounded_edittext"/>
+
 
 
         <Button
@@ -141,6 +114,50 @@
             android:textSize="@dimen/_14sdp"
             android:id="@+id/edit"
             android:text="@string/edit"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:textColorHint="@color/colorAccent2"
+            android:id="@+id/old_password"
+            android:textSize="@dimen/_12sdp"
+            android:inputType="textPassword"
+            android:textColor="@color/colorAccent2"
+            android:hint="@string/old_password"
+            android:background="@drawable/rounded_edittext"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:id="@+id/new_password"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/colorAccent2"
+            android:textColorHint="@color/colorAccent2"
+            android:inputType="textPassword"
+            android:hint="@string/new_password"
+            android:background="@drawable/rounded_edittext"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/colorAccent2"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:id="@+id/change"
+            android:text="@string/change_password"/>
     </LinearLayout>
     </ScrollView>
 </RelativeLayout>

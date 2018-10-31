@@ -45,6 +45,7 @@
           android:layout_marginEnd="@dimen/_10sdp"
           android:layout_marginTop="@dimen/_3sdp"
           android:textSize="@dimen/_14sdp"
+          android:inputType="textEmailAddress"
           android:background="@drawable/rounded_edittext" />
 
   </LinearLayout>
@@ -70,7 +71,7 @@
             android:layout_marginStart="@dimen/_6sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_3sdp"
-            android:inputType="number"
+            android:inputType="textPassword"
             android:textSize="@dimen/_14sdp"
             android:background="@drawable/rounded_edittext" />
 
