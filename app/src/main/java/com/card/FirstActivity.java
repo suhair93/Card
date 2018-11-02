@@ -88,8 +88,8 @@ public class FirstActivity extends AppCompatActivity {
                                                     boolean emailVerified = user.isEmailVerified();
                                                     if (emailVerified) {
                                                         dialog1.cancel();
-                                                        Toast.makeText(FirstActivity.this, "User is signed ", Toast.LENGTH_SHORT).show();
-                                                        Intent i = new Intent(FirstActivity.this, MainActivity.class);
+                                                        //Toast.makeText(FirstActivity.this, "User is signed ", Toast.LENGTH_SHORT).show();
+                                                        Intent i = new Intent(FirstActivity.this, RegistrationSuccessActivity.class);
                                                         startActivity(i);
                                                     } else {
                                                         dialog1.cancel();

@@ -14,8 +14,10 @@
         android:textSize="@dimen/_18sdp"
         android:textColor="@color/text_color"
         android:layout_margin="@dimen/_10sdp"
-        android:text="@string/an_e_mail_has_been_sent_to_your_registered_e_mail_address_please_enter_the_verification_code_included_in_that_e_mail"/>
 
+        android:text="We have sent a message to your email go and check the registration.
+"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,6 +25,7 @@
         android:textColor="@color/text_color"
         android:layout_marginLeft="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_10sdp"
+        android:visibility="gone"
         android:text="@string/please_note_that_the_verification_code_will_expire_24_hours_after_the_e_mail_was_sent"/>
 
     <TextView
@@ -30,10 +33,11 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/_18sdp"
         android:layout_marginTop="@dimen/_15sdp"
+
         android:textColor="@color/text_color"
         android:layout_marginLeft="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_10sdp"
-        android:text="Verification code"/>
+        android:text=".Welcome with us"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -42,6 +46,7 @@
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         android:padding="@dimen/_5sdp"
+        android:visibility="gone"
         android:id="@+id/code"
         android:textSize="@dimen/_12sdp"
         android:textColorHint="@color/text_color"
@@ -61,7 +66,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/_14sdp"
         android:id="@+id/submit"
-        android:text="@string/submit"/>
+        android:text="Go"/>
 
 
 </LinearLayout>

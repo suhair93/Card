@@ -77,27 +77,29 @@ public class PurchaseActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                HashMap<String, PurchaseModel> results = dataSnapshot.getValue(new GenericTypeIndicator<HashMap<String, PurchaseModel>>() {});
-                List<PurchaseModel> lList = new ArrayList<PurchaseModel>(results.values());
+                try {
+                    HashMap<String, PurchaseModel> results = dataSnapshot.getValue(new GenericTypeIndicator<HashMap<String, PurchaseModel>>() {
+                    });
+                    List<PurchaseModel> lList = new ArrayList<PurchaseModel>(results.values());
 
-                if(lList.size()==0)
-                    noMember.setVisibility(View.VISIBLE);
-                else {
-                    List<PurchaseModel> lList2 = new ArrayList<PurchaseModel>();
+                    if (lList.size() == 0)
+                        noMember.setVisibility(View.VISIBLE);
+                    else {
+                        List<PurchaseModel> lList2 = new ArrayList<PurchaseModel>();
 
-                    for (PurchaseModel post : lList) {
-                        if(ID.equals(post.getID())){
-                            lList2.add(new PurchaseModel(post.getID(),post.getPrice(),post.getDate()));
+                        for (PurchaseModel post : lList) {
+                            if (ID.equals(post.getID())) {
+                                lList2.add(new PurchaseModel(post.getID(), post.getPrice(), post.getDate()));
 
+                            }
                         }
+                        PurchaseAdapter nAdapter = new PurchaseAdapter(PurchaseActivity.this, lList2);
+                        recyclerView.setAdapter(nAdapter);
+                        recyclerView.setItemAnimator(new DefaultItemAnimator());
+
                     }
-                    PurchaseAdapter nAdapter = new PurchaseAdapter(PurchaseActivity.this, lList2);
-                    recyclerView.setAdapter(nAdapter);
-                    recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-                }
-
-
+                }catch (Exception ex){   noMember.setVisibility(View.VISIBLE);}
 
             }
 

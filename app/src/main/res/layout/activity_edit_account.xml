@@ -78,7 +78,7 @@
             android:textColorHint="@color/colorAccent2"
             android:inputType="text"
             android:textColor="@color/colorAccent2"
-            android:hint="@string/user_name"
+            android:hint="Username"
             android:background="@drawable/rounded_edittext"/>
 
         <EditText
@@ -91,6 +91,7 @@
             android:id="@+id/id_number"
             android:inputType="number"
             android:textSize="@dimen/_12sdp"
+            android:visibility="gone"
             android:textColorHint="@color/colorAccent2"
             android:textColor="@color/colorAccent2"
             android:hint="@string/id_number"

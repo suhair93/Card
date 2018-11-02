@@ -63,25 +63,6 @@ public class locationFragment extends Fragment implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
 
 
-//        SharedPreferences prefsRemmber = getActivity().getSharedPreferences("login", MODE_PRIVATE);
-  //      ID = prefsRemmber.getString("ID", "");
-
-
-
-    /*
-     FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference posts = database.getReference("Location");
-    LocationModelMap post1=new LocationModelMap("1","Market 1","24.88773","46.92185");
-        LocationModelMap post2=new LocationModelMap("2","Market 2","24.58773","46.22185");
-        LocationModelMap post3=new LocationModelMap("3","Market 3","24.2773","46.6185");
-        LocationModelMap post4=new LocationModelMap("4","Market 4","24.38773","46.4185");
-
-        posts.push().setValue(post1);
-        posts.push().setValue(post2);
-        posts.push().setValue(post3);
-        posts.push().setValue(post4);*/
-
-
 
         return view;
     }
@@ -107,7 +88,6 @@ public class locationFragment extends Fragment implements OnMapReadyCallback {
                             LatLng origin = new LatLng(  Double.parseDouble(lList.get(i).getLat()), Double.parseDouble(lList.get(i).getLng()));
                             CameraUpdate panToOrigin = CameraUpdateFactory.newLatLng(origin);
                             mMap.moveCamera(panToOrigin);
-                            // BitmapDescriptor ic1 = BitmapDescriptorFactory.fromResource(R.drawable.maintenance);
 
                             MarkerOptions marker = new MarkerOptions()
                                     .position(origin)
@@ -116,7 +96,7 @@ public class locationFragment extends Fragment implements OnMapReadyCallback {
                                     //.icon(ic4)
                                     ;
                             googleMap.addMarker(marker);
-                            mMap.animateCamera(CameraUpdateFactory.zoomTo(16), 400, null);
+                            mMap.animateCamera(CameraUpdateFactory.zoomTo(8), 400, null);
 
                         }else {
                             LatLng origin = new LatLng(Double.parseDouble(lList.get(i).getLat()), Double.parseDouble(lList.get(i).getLng()));
@@ -126,7 +106,7 @@ public class locationFragment extends Fragment implements OnMapReadyCallback {
                                     .snippet("")
                                     //.icon(ic4)
                                     ;
-                      //      googleMap.addMarker(marker);
+                            googleMap.addMarker(marker);
                         }
 
 

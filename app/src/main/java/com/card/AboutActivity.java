@@ -39,9 +39,9 @@ public class AboutActivity extends AppCompatActivity {
                 .addItem(phoneElement)
                 .setDescription("E Wallet App")
                 .addGroup("Connect with us")
-                .addEmail("")
-                .addInstagram("")
-                .addTwitter("")
+                .addEmail("Ewalletapp@hotmail.com")
+                .addInstagram("ewalletapp")
+                .addTwitter("ewalletapp")
                 .setCustomFont("fonts/regular.ttf")
 
                 .create();
