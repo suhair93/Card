@@ -114,7 +114,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
     public void sendVerificationEmail() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-       // user(id_number.getText().toString());
+        // user(id_number.getText().toString());
         if (user != null) {
             user.sendEmailVerification()
                     .addOnCompleteListener(new OnCompleteListener<Void>() {

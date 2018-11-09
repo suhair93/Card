@@ -42,7 +42,13 @@ public class FirstActivity extends AppCompatActivity {
                 .build()
         );
         setContentView(R.layout.activity_first);
-
+        SharedPreferences prefsLogin = getSharedPreferences("login", MODE_PRIVATE);
+        boolean isLoggedIn = prefsLogin.getBoolean("isLoggedIn", false);
+        if(isLoggedIn){
+            Intent i = new Intent(FirstActivity.this, MainActivity.class);
+            startActivity(i);
+            finish();
+        }
         dialog1 = new ProgressDialog(this);
         dialog1.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         dialog1.setMessage("Log in Please wait");
@@ -83,11 +89,14 @@ public class FirstActivity extends AppCompatActivity {
 
                                                     SharedPreferences.Editor editor = getSharedPreferences("login", MODE_PRIVATE).edit();
                                                     editor.putString("ID", user.getUid());
+                                                    editor.putBoolean("isLoggedIn", true);
                                                     editor.apply();
 
                                                     boolean emailVerified = user.isEmailVerified();
                                                     if (emailVerified) {
                                                         dialog1.cancel();
+
+
                                                         //Toast.makeText(FirstActivity.this, "User is signed ", Toast.LENGTH_SHORT).show();
                                                         Intent i = new Intent(FirstActivity.this, RegistrationSuccessActivity.class);
                                                         startActivity(i);

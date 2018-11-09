@@ -20,6 +20,7 @@ import com.card.R;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
+import static android.content.Context.MODE_PRIVATE;
 import static android.support.v4.app.ActivityCompat.finishAffinity;
 
 
@@ -70,6 +71,9 @@ public class settingFragment extends Fragment {
                                 } else if(Build.VERSION.SDK_INT>=21){
                                     getActivity().finishAndRemoveTask();
                                 }
+                                SharedPreferences.Editor editor = getContext().getSharedPreferences("login", MODE_PRIVATE).edit();
+                                editor.putBoolean("isLoggedIn", false);
+                                editor.apply();
 
                             }
                         })

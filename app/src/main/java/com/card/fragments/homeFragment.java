@@ -53,6 +53,14 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 public class homeFragment extends Fragment {
     View view;
 String Price,id_card;
+public static TextView name;
+    public static void newInstance(String someInt) {
+        homeFragment myFragment = new homeFragment();
+
+        if(!someInt.equals(""))
+            name.setText(someInt);
+
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -68,6 +76,7 @@ String Price,id_card;
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference posts = database.getReference("Users");
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        name=(TextView)view.findViewById(R.id.name) ;
 
         posts.addValueEventListener(new ValueEventListener() {
             @Override
@@ -78,6 +87,7 @@ String Price,id_card;
                     if(user.getUid().equals(post.getUID())){
                         Price= post.getPrice().toString()+" SAR";
                     } }
+
             }
             @Override
             public void onCancelled(DatabaseError databaseError) { }
@@ -92,7 +102,7 @@ String Price,id_card;
 
                 for (userModel post : posts) {
                     if(user.getUid().equals(post.getUID())){
-
+                        name.setText(user.getDisplayName());
                         id_card=post.getID_Card();
                         id_number.setText( id_card);
                     }
@@ -101,8 +111,6 @@ String Price,id_card;
             @Override
             public void onCancelled(DatabaseError databaseError) { }});
 
-        TextView name=(TextView)view.findViewById(R.id.name) ;
-        name.setText(user.getDisplayName());
 
         LinearLayout Remaining=(LinearLayout)view.findViewById(R.id.Remaining);
         Remaining.setOnClickListener(new View.OnClickListener() {
