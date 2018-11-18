@@ -65,7 +65,7 @@
             android:textColorHint="@color/colorAccent2"
             android:textColor="@color/colorAccent2"
             android:hint="@string/e_mail"
-            android:background="@drawable/rounded_edittext"/>
+            android:background="#74ffffff"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"

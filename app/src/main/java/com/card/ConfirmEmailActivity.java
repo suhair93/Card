@@ -28,7 +28,6 @@ public class ConfirmEmailActivity extends AppCompatActivity {
                 .build()
         );
 
-
         EditText code=(EditText)findViewById(R.id.code);
         code.setVisibility(View.GONE);
         

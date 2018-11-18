@@ -104,7 +104,7 @@ public static TextView name;
                     if(user.getUid().equals(post.getUID())){
                         name.setText(user.getDisplayName());
                         id_card=post.getID_Card();
-                        id_number.setText( id_card);
+                        id_number.setText(id_card);
                     }
                 }
             }
@@ -147,7 +147,7 @@ public static TextView name;
 
                 ImageView imageView=(ImageView)views.findViewById(R.id.imageView);
 
-                String text=id_number.getText().toString() ;
+                String text=user.getUid() ;
                 MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
                 try {
                     BitMatrix bitMatrix = multiFormatWriter.encode(text, BarcodeFormat.QR_CODE,200,200);
